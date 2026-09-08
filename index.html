@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryam Mohamed ✨ Junior Backend .NET Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #05050a;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .font-code { font-family: 'Fira Code', monospace; }
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+            animation: float 10s infinite alternate;
+        }
+        @keyframes float {
+            0% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(30px, 50px) scale(1.1); }
+            100% { transform: translate(-20px, -30px) scale(0.9); }
+        }
+        .hero-glow {
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(129, 140, 248, 0.05) 50%, transparent 70%);
+        }
+        .neon-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #f43f5e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 10px 40px -10px rgba(56, 189, 248, 0.3);
+            transform: translateY(-5px);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #05050a; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+    </style>
+</head>
+<body class="relative selection:bg-sky-500 selection:text-white">
+
+    <div class="blob w-[500px] h-[500px] bg-sky-600/30 rounded-full top-[-100px] left-[-100px]"></div>
+    <div class="blob w-[600px] h-[600px] bg-indigo-600/20 rounded-full top-[40%] right-[-150px]"></div>
+    <div class="blob w-[400px] h-[400px] bg-rose-600/20 rounded-full bottom-[10%] left-[20%]"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#05050a]/70 backdrop-blur-xl border-b border-white/10 px-6 lg:px-16 py-4 flex justify-between items-center transition-all">
+        <a href="#" class="font-code text-xl font-bold tracking-wider neon-text">Maryam</a>
+        
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+            <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
+            <a href="#skills" class="hover:text-sky-400 transition-colors">Skills</a>
+            <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
+            <a href="#milestones" class="hover:text-sky-400 transition-colors">Milestones</a>
+            <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+            <a href="https://wa.me/201000280706" target="_blank" class="bg-gradient-to-r from-sky-400 to-indigo-500 text-slate-950 font-bold px-5 py-2.5 rounded-full text-sm shadow-lg shadow-sky-500/20 hover:scale-105 transition-all">
+                <i class="fa-brands fa-whatsapp mr-1.5"></i> Let's Talk
+            </a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-slate-200 text-2xl focus:outline-none">
+            <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#05050a]/95 backdrop-blur-2xl z-40 flex flex-col items-center justify-center gap-6 text-xl font-semibold hidden md:hidden">
+        <a href="#about" class="mob-link text-slate-300 hover:text-sky-400">About</a>
+        <a href="#skills" class="mob-link text-slate-300 hover:text-sky-400">Skills</a>
+        <a href="#projects" class="mob-link text-slate-300 hover:text-sky-400">Projects</a>
+        <a href="#milestones" class="mob-link text-slate-300 hover:text-sky-400">Milestones</a>
+        <a href="#contact" class="mob-link text-slate-300 hover:text-sky-400">Contact</a>
+        <a href="https://wa.me/201000280706" class="bg-sky-400 text-slate-950 px-6 py-2.5 rounded-full text-base font-bold">WhatsApp Me</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen hero-glow flex items-center justify-center pt-32 pb-20 px-6 lg:px-16 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+            
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/30 px-4 py-1.5 rounded-full text-sky-400 text-xs font-bold tracking-wide uppercase">
+                    <i class="fa-solid fa-fire text-amber-400"></i> Junior Backend .NET Developer
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none">
+                    Hi, I'm <span class="neon-text">Maryam Mohamed</span>
+                </h1>
+                
+                <p class="text-slate-300 text-lg leading-relaxed max-w-xl">
+                    Computer Science student, problem solver, and competitive programmer building high-performance logic with absolute precision.
+                </p>
+
+                <div class="glass-card p-5 rounded-2xl border-l-4 border-l-sky-400 text-slate-200 text-sm leading-relaxed shadow-xl cursor-default flex items-start gap-3">
+                    <i class="fa-solid fa-quote-left text-sky-400 text-xl mt-1 opacity-70"></i>
+                    <p>Your idea deserves to be seen and used in the real world. The distance between your concept and your user’s screen is a short journey that I navigate with precision: rigorous SDLC engineering, swift execution, and uncompromising quality—transforming your vision into a digital product that exceeds your expectations.</p>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="https://wa.me/201000280706" target="_blank" title="WhatsApp" class="bg-emerald-600 hover:bg-emerald-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center transition-all shadow-xl shadow-emerald-600/30 hover:scale-105">
+                        <i class="fa-brands fa-whatsapp text-3xl"></i>
+                    </a>
+                    <a href="https://t.me/Mm_Tharwat" target="_blank" title="Telegram" class="bg-sky-600 hover:bg-sky-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center transition-all shadow-xl shadow-sky-600/30 hover:scale-105">
+                        <i class="fa-brands fa-telegram text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image Frame -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-3xl overflow-hidden glass-card p-3 shadow-2xl group" data-tilt data-tilt-max="12" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="w-full h-full rounded-2xl overflow-hidden relative border border-sky-500/30">
+                        <img src="my-portfolio/my-photo.jpg" alt="Maryam Mohamed" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#05050a] via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-center">
+                            <span class="font-code text-xs text-sky-300 font-bold bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-sky-500/30">
+                                💻 .NET Developer
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 lg:px-16 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-5xl font-extrabold mb-4">About <span class="neon-text">Me</span></h2>
+            <p class="text-slate-400">Click any card below to view detailed credentials</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div onclick="openModal('About Maryam Mohamed', 'I am Maryam Mohamed Tharwat, a Computer Science and Artificial Intelligence student at Damietta University. My core passion lies in problem-solving, advanced algorithms, and competitive programming using C++, alongside building robust backend systems and full-stack web applications with C# and .NET. As an active problem solver and community leader in the ACPC community, I thrive on tackling complex logic challenges and transforming conceptual ideas into high-performance digital solutions.')" class="glass-card p-8 rounded-3xl">
+                <div class="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-xl mb-6">
+                    <i class="fa-solid fa-user-gear"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fa-solid fa-code text-sky-400"></i> Who I Am</h3>
+                <p class="text-slate-200 font-semibold text-base">CS Student & Competitive Programmer</p>
+                <p class="text-slate-400 text-sm mb-4">Passionate about algorithms, C++ problem-solving, and .NET backend development.</p>
+                <p class="text-sky-400 text-xs font-bold mt-4 flex items-center gap-1">Click to view full bio <i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+
+            <div onclick="openModal('Education', 'Damietta University - Faculty of Computers and Artificial Intelligence\n\n• Pursuing my Bachelor degree in Computer Science.\n• Reached third year and specialized in the Computer Science (CS) department.\n• Focused on core computer science subjects, algorithms, data structures, and software engineering principles.')" class="glass-card p-8 rounded-3xl">
+                <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-xl mb-6">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fa-solid fa-university text-indigo-400"></i> Education</h3>
+                <p class="text-slate-200 font-semibold text-base">Damietta University</p>
+                <p class="text-slate-400 text-sm mb-4">Faculty of Computers & AI (3rd Year - CS Department)</p>
+                <p class="text-indigo-400 text-xs font-bold mt-4 flex items-center gap-1">Click to view full details <i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+
+            <div onclick="openModal('Professional Training - DEPI', 'Digital Egypt Pioneers Initiative (DEPI)\n\n• .NET Full Stack Development Trainee.\n• Mastering scalable backend architecture, database modeling, Entity Framework Core, ASP.NET Core APIs, and modern enterprise web solutions.')" class="glass-card p-8 rounded-3xl">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl mb-6">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fa-solid fa-award text-emerald-400"></i> DEPI Training</h3>
+                <p class="text-slate-200 font-semibold text-base">Digital Egypt Pioneers Initiative</p>
+                <p class="text-slate-400 text-sm mb-4">.NET Full Stack Development Trainee</p>
+                <p class="text-emerald-400 text-xs font-bold mt-4 flex items-center gap-1">Click to view full details <i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 lg:px-16 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-5xl font-extrabold mb-4">Technical <span class="neon-text">Skills</span></h2>
+            <p class="text-slate-400">Click any skill category for breakdown</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div onclick="openModal('Programming Languages', '• C#: Strong foundation in object-oriented programming, LINQ, asynchronous programming, and .NET backend APIs.\n• C++: Extensively used for competitive programming, algorithms, and data structures optimization.\n• Python: Custom scriptwriting, library development, and problem solving automation.')" class="glass-card p-8 rounded-3xl">
+                <h4 class="font-code text-sky-400 font-bold text-lg mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-code"></i> Languages
+                </h4>
+                <div class="flex flex-wrap gap-3 mb-4">
+                    <span class="bg-slate-900/80 border border-slate-700/80 text-slate-200 px-4 py-2 rounded-xl text-sm">C#</span>
+                    <span class="bg-slate-900/80 border border-slate-700/80 text-slate-200 px-4 py-2 rounded-xl text-sm">C++</span>
+                    <span class="bg-slate-900/80 border border-slate-700/80 text-slate-200 px-4 py-2 rounded-xl text-sm">Python</span>
+                </div>
+                <p class="text-sky-400 text-xs font-bold">Click for proficiency breakdown</p>
+            </div>
+
+            <div onclick="openModal('Core & Web Technologies', '• HTML5 / CSS3: Responsive web designs and modern layouts.\n• JavaScript: Dynamic interactivity, DOM manipulation, and state management.\n• OOP & Data Structures: Advanced understanding of graph traversal (BFS/DFS), Trie, sorting algorithms, and clean architecture.')" class="glass-card p-8 rounded-3xl">
+                <h4 class="font-code text-sky-400 font-bold text-lg mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-globe"></i> Core & Web
+                </h4>
+                <div class="flex flex-wrap gap-3 mb-4">
+                    <span class="bg-slate-900/80 border border-slate-700/80 text-slate-200 px-4 py-2 rounded-xl text-sm">HTML/CSS</span>
+                    <span class="bg-slate-900/80 border border-slate-700/80 text-slate-200 px-4 py-2 rounded-xl text-sm">JavaScript</span>
+                    <span class="bg-slate-900/80 border border-slate-700/80 text-slate-200 px-4 py-2 rounded-xl text-sm">OOP</span>
+                </div>
+                <p class="text-sky-400 text-xs font-bold">Click for proficiency breakdown</p>
+            </div>
+
+            <div onclick="openModal('Tools & Tech Stack', '• Version Control: Git & GitHub for repository management and collaborative workflows.\n• IDEs: Visual Studio, Visual Studio Code, Code::Blocks.\n• Databases: SQL database design, relational modeling, constraints, and complex queries.')" class="glass-card p-8 rounded-3xl">
+                <h4 class="font-code text-sky-400 font-bold text-lg mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-toolbox"></i> Tools & Stack
+                </h4>
+                <div class="flex flex-wrap gap-3 mb-4">
+                    <span class="bg-slate-900/80 border border-slate-700/80 text-slate-200 px-4 py-2 rounded-xl text-sm">Git & GitHub</span>
+                    <span class="bg-slate-900/80 border border-slate-700/80 text-slate-200 px-4 py-2 rounded-xl text-sm">Visual Studio</span>
+                    <span class="bg-slate-900/80 border border-slate-700/80 text-slate-200 px-4 py-2 rounded-xl text-sm">SQL</span>
+                </div>
+                <p class="text-sky-400 text-xs font-bold">Click for proficiency breakdown</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 lg:px-16 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-5xl font-extrabold mb-4">Featured <span class="neon-text">Projects</span></h2>
+            <p class="text-slate-400">Click any project card to view its details or screenshots</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- AI HR System Project -->
+            <div onclick="openModal('AI HR System - 1st Place Information Systems Project', 'An advanced AI-powered Human Resources database system designed and engineered for optimal workforce management and recruitment automation.\n\n• Achieved 1st place in Information Systems course project competition.\n• Engineered complex relational schema design, constraints, and robust database operations.\n\nClick the link below or visit LinkedIn to view the official project announcement post!')" class="glass-card p-8 rounded-3xl flex flex-col justify-between cursor-pointer">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="text-amber-400 text-3xl"><i class="fa-solid fa-trophy"></i></div>
+                        <span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20 px-3 py-1 rounded-full font-bold">1st Place • Information Systems</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 flex items-center gap-3"><i class="fa-solid fa-id-badge text-amber-400"></i> AI HR System</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">An intelligent database system for HR management and recruitment that secured 1st place in Information Systems.</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/posts/maryamtharwat_informationsystems-ai-hr-activity-7327759814699216896-WG82?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFK694gBPnYpxpE-zkvK7RwP66-fdDjZfpQ" target="_blank" onclick="event.stopPropagation()" class="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 text-xs font-bold pt-4 border-t border-slate-800 w-full">
+                        <i class="fa-brands fa-linkedin text-base"></i> View LinkedIn Post <i class="fa-solid fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- MatheMedica Library Project -->
+            <div onclick="openGalleryModal('MatheMedica Library - 1st Place Structured Programming Project', ['my-portfolio/img.jpg', 'my-portfolio/img1.jpg', 'my-portfolio/img2.jpg', 'my-portfolio/img3.jpg', 'my-portfolio/img4.jpg'])" class="glass-card p-8 rounded-3xl flex flex-col justify-between cursor-pointer">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="text-amber-400 text-3xl"><i class="fa-solid fa-cube"></i></div>
+                        <span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20 px-3 py-1 rounded-full font-bold">1st Place • Structured Programming</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 flex items-center gap-3"><i class="fa-solid fa-images text-sky-400"></i> MatheMedica Library</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">A custom Python library containing mathematical and medical utility functions engineered from scratch, securing 1st place in Structured Programming.</p>
+                </div>
+                <p class="text-sky-400 text-xs font-bold pt-4 border-t border-slate-800 flex items-center gap-1">Click to view project screenshots <i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+
+            <!-- Number Guessing Game Project -->
+            <div onclick="openGalleryModal('Number Guessing Game - Project Showcase', ['my-portfolio/image2.jpg', 'my-portfolio/image3.jpg', 'my-portfolio/image10.jpg', 'my-portfolio/image4.jpg'])" class="glass-card p-8 rounded-3xl flex flex-col justify-between cursor-pointer">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="text-sky-400 text-3xl"><i class="fa-solid fa-gamepad"></i></div>
+                        <span class="text-xs bg-sky-500/10 text-sky-400 border border-sky-500/20 px-3 py-1 rounded-full font-bold">Web App</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 flex items-center gap-3"><i class="fa-solid fa-images text-sky-400"></i> Number Guessing Game</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">An interactive web application featuring dynamic score tracking and custom game logic.</p>
+                </div>
+                <p class="text-sky-400 text-xs font-bold pt-4 border-t border-slate-800 flex items-center gap-1">Click to view project screenshots <i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+
+            <!-- Tech Tracer Project -->
+            <div onclick="openModal('Tech Tracer - AI Educational Web App', 'Tech Tracer is an innovative educational web application featuring AI assistant integration, functional requirements modeling, and detailed specification tables.\n\n• Designed to enhance the learning experience through smart AI interactions.\n• Developed comprehensive system processes, user requirements, and software architecture specs.\n\nClick the link below or visit LinkedIn to view the official announcement post!')" class="glass-card p-8 rounded-3xl flex flex-col justify-between cursor-pointer">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="text-indigo-400 text-3xl"><i class="fa-solid fa-brain"></i></div>
+                        <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-3 py-1 rounded-full font-bold">AI & Software Eng</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 flex items-center gap-3"><i class="fa-solid fa-diagram-project text-indigo-400"></i> Tech Tracer</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">An educational web app featuring AI assistant interactions, functional requirements, and structured specifications.</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/posts/maryamtharwat_techtracer-ai-softwareengineering-activity-7462233846802042880-cPvu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFK694gBPnYpxpE-zkvK7RwP66-fdDjZfpQ" target="_blank" onclick="event.stopPropagation()" class="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 text-xs font-bold pt-4 border-t border-slate-800 w-full">
+                        <i class="fa-brands fa-linkedin text-base"></i> View LinkedIn Post <i class="fa-solid fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Section -->
+    <section id="milestones" class="py-24 px-6 lg:px-16 max-w-5xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-5xl font-extrabold mb-4">Leadership & <span class="neon-text">Milestones</span></h2>
+            <p class="text-slate-400">Click any milestone card for full event details & certificates</p>
+        </div>
+
+        <div class="space-y-6">
+            <div onclick="openModal('ACPC Damietta Community', 'Vice Technical Head, Mentor Leader, Problem Setter & Mentor\n\n• Mentoring students in advanced competitive programming.\n• Designing and reviewing contest problems on Codeforces Polygon.\n• Overseeing technical mentoring groups and workshops.')" class="glass-card p-8 rounded-3xl">
+                <h3 class="text-xl font-bold mb-1 flex items-center gap-3"><i class="fa-solid fa-users-gear text-sky-400"></i> ACPC Damietta University Community</h3>
+                <span class="inline-block text-sky-400 font-bold text-sm mb-3">Vice Technical Head, Mentor Leader, Problem Setter & Mentor</span>
+                <p class="text-slate-400 text-sm">Click to view leadership responsibilities and contributions.</p>
+            </div>
+
+            <!-- ECPC 2026 Certificate Modal Trigger -->
+            <div onclick="openImageModal('Egyptian Collegiate Programming Contest (ECPC) 2026 - 45th Place', 'my-portfolio/image.jpg')" class="glass-card p-8 rounded-3xl">
+                <h3 class="text-xl font-bold mb-1 flex items-center gap-3"><i class="fa-solid fa-trophy text-amber-400"></i> Egyptian Collegiate Programming Contest (ECPC) 2026</h3>
+                <span class="inline-block text-indigo-400 font-bold text-sm mb-3">45th Place Nationwide &bull; 7th Place in Damietta University</span>
+                <p class="text-sky-400 text-xs font-bold flex items-center gap-1">Click to view official certificate <i class="fa-solid fa-image"></i></p>
+            </div>
+
+            <!-- DCC 2026 Certificate Modal Trigger -->
+            <div onclick="openImageModal('Damietta Competitive Competition (DCC) 2026 - Rank 7', 'my-portfolio/image1.jpg')" class="glass-card p-8 rounded-3xl">
+                <h3 class="text-xl font-bold mb-1 flex items-center gap-3"><i class="fa-solid fa-medal text-rose-400"></i> Damietta Competitive Competition (DCC)</h3>
+                <span class="inline-block text-rose-400 font-bold text-sm mb-3">Rank 7 &bull; Team: Code W Etma5tar</span>
+                <p class="text-sky-400 text-xs font-bold flex items-center gap-1">Click to view official certificate <i class="fa-solid fa-image"></i></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 lg:px-16 max-w-4xl mx-auto">
+        <div class="glass-card p-10 sm:p-16 rounded-3xl text-center shadow-2xl relative overflow-hidden border border-sky-500/20 cursor-default">
+            <h2 class="text-3xl sm:text-5xl font-extrabold mb-4">Let's Build Something <span class="neon-text">Amazing</span></h2>
+            <p class="text-slate-400 text-lg max-w-xl mx-auto mb-10 leading-relaxed">Ready to transform your vision into a world-class digital reality? Connect instantly via WhatsApp or Telegram.</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-10">
+                <a href="https://wa.me/201000280706" target="_blank" title="WhatsApp" class="bg-emerald-600 hover:bg-emerald-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center transition-all shadow-xl shadow-emerald-600/30 hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-3xl"></i>
+                </a>
+                <a href="https://t.me/Mm_Tharwat" target="_blank" title="Telegram" class="bg-sky-600 hover:bg-sky-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center transition-all shadow-xl shadow-sky-600/30 hover:scale-105">
+                    <i class="fa-brands fa-telegram text-3xl"></i>
+                </a>
+            </div>
+
+            <div class="flex justify-center gap-6 text-xl">
+                <a href="mailto:maryamtharwat255@gmail.com" class="w-14 h-14 rounded-2xl bg-slate-900 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-400 transition-all shadow-lg"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/maryamtharwat/" target="_blank" class="w-14 h-14 rounded-2xl bg-slate-900 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-400 transition-all shadow-lg"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/Maryam-m0hamed" target="_blank" class="w-14 h-14 rounded-2xl bg-slate-900 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-400 transition-all shadow-lg"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text Modal Popup Window -->
+    <div id="infoModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
+        <div class="glass-card max-w-lg w-full p-8 rounded-3xl relative border border-sky-500/40 shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="modalTitle" class="text-2xl font-bold mb-4 text-sky-400"></h3>
+            <p id="modalBody" class="text-slate-300 text-base leading-relaxed whitespace-pre-line mb-6"></p>
+            <div class="flex justify-end">
+                <button onclick="closeModal()" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-6 py-2 rounded-xl transition-all">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Single Image Modal Popup Window -->
+    <div id="imageModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+        <div class="glass-card max-w-4xl w-full p-6 rounded-3xl relative border border-sky-500/40 shadow-2xl text-center">
+            <button onclick="closeImageModal()" class="absolute top-4 right-5 text-slate-400 hover:text-white text-2xl z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="imageModalTitle" class="text-xl font-bold mb-4 text-sky-400"></h3>
+            <div class="overflow-hidden rounded-2xl border border-white/10 mb-6 bg-slate-950 flex justify-center">
+                <img id="modalImgSrc" src="" alt="Certificate" class="max-h-[75vh] w-auto object-contain">
+            </div>
+            <div class="flex justify-end">
+                <button onclick="closeImageModal()" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-6 py-2 rounded-xl transition-all">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Multi-Image Gallery Modal Popup Window -->
+    <div id="galleryModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+        <div class="glass-card max-w-4xl w-full p-6 rounded-3xl relative border border-sky-500/40 shadow-2xl text-center">
+            <button onclick="closeGalleryModal()" class="absolute top-4 right-5 text-slate-400 hover:text-white text-2xl z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="galleryModalTitle" class="text-xl font-bold mb-2 text-sky-400"></h3>
+            <p id="galleryCounter" class="text-xs text-slate-400 mb-4 font-code"></p>
+            
+            <div class="overflow-hidden rounded-2xl border border-white/10 mb-6 bg-slate-950 flex justify-center relative min-h-[350px] items-center">
+                <img id="galleryImgSrc" src="" alt="Project Screenshot" class="max-h-[70vh] w-auto object-contain">
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="flex justify-between items-center">
+                <button onclick="prevGalleryImage()" class="bg-slate-800 hover:bg-slate-700 text-sky-400 font-bold px-5 py-2.5 rounded-xl border border-slate-700 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> Previous
+                </button>
+                <button onclick="nextGalleryImage()" class="bg-slate-800 hover:bg-slate-700 text-sky-400 font-bold px-5 py-2.5 rounded-xl border border-slate-700 transition-all flex items-center gap-2">
+                    Next <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 border-t border-white/10 text-slate-500 text-sm">
+        <p>&copy; 2026 Maryam Mohamed. Crafted with passion & unmatched precision.</p>
+    </footer>
+
+    <script>
+        function openModal(title, text) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalBody').innerText = text;
+            document.getElementById('infoModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('infoModal').classList.add('hidden');
+        }
+
+        function openImageModal(title, imgSrc) {
+            document.getElementById('imageModalTitle').innerText = title;
+            document.getElementById('modalImgSrc').src = imgSrc;
+            document.getElementById('imageModal').classList.remove('hidden');
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+        }
+
+        // Gallery Variables & Functions
+        let currentGalleryImages = [];
+        let currentGalleryIndex = 0;
+
+        function openGalleryModal(title, imagesArray) {
+            document.getElementById('galleryModalTitle').innerText = title;
+            currentGalleryImages = imagesArray;
+            currentGalleryIndex = 0;
+            updateGalleryView();
+            document.getElementById('galleryModal').classList.remove('hidden');
+        }
+
+        function updateGalleryView() {
+            document.getElementById('galleryImgSrc').src = currentGalleryImages[currentGalleryIndex];
+            document.getElementById('galleryCounter').innerText = `Image ${currentGalleryIndex + 1} of ${currentGalleryImages.length}`;
+        }
+
+        function nextGalleryImage() {
+            currentGalleryIndex = (currentGalleryIndex + 1) % currentGalleryImages.length;
+            updateGalleryView();
+        }
+
+        function prevGalleryImage() {
+            currentGalleryIndex = (currentGalleryIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+            updateGalleryView();
+        }
+
+        function closeGalleryModal() {
+            document.getElementById('galleryModal').classList.add('hidden');
+        }
+
+        window.onclick = function(event) {
+            const infoModal = document.getElementById('infoModal');
+            const imageModal = document.getElementById('imageModal');
+            const galleryModal = document.getElementById('galleryModal');
+            if (event.target == infoModal) closeModal();
+            if (event.target == imageModal) closeImageModal();
+            if (event.target == galleryModal) closeGalleryModal();
+        }
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobLinks = document.querySelectorAll('.mob-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
